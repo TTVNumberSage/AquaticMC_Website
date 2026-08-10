@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07131f" />
+  <meta name="description" content="AquaticMC — a Minecraft Lifesteal experience built to fight, survive, and dominate." />
+  <title>AquaticMC | Lifesteal Minecraft Server</title>
+  <link rel="icon" type="image/png" href="assets/aquaticmc.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="AquaticMC home">
+        <img src="assets/aquaticmc.png" alt="AquaticMC logo" />
+        <span>Aquatic<span>MC</span></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a class="active" href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="#staff">Staff</a>
+        <a href="#vote">Vote</a>
+        <a href="https://discord.gg/ntz2NSUmTn" target="_blank" rel="noopener">Discord</a>
+        <button class="nav-copy" data-copy-ip>Copy IP</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-content">
+        <div class="hero-logo-wrap">
+          <div class="logo-ring"></div>
+          <img class="hero-logo" src="assets/aquaticmc.png" alt="AquaticMC" />
+        </div>
+
+        <div class="eyebrow"><span class="status-dot"></span> LIFESTEAL IS ONLINE</div>
+        <h1>Welcome to <span>AquaticMC</span></h1>
+        <p class="hero-copy">
+          A new Minecraft Lifesteal experience built for players who want to
+          <strong>fight, survive, and dominate.</strong>
+        </p>
+
+        <div class="server-ip">
+          <div>
+            <small>SERVER IP</small>
+            <code>play.playaquaticmc.xyz</code>
+          </div>
+          <button class="copy-icon" data-copy-ip aria-label="Copy server IP">⧉</button>
+        </div>
+
+        <div class="hero-actions">
+          <button class="button button-primary" data-copy-ip>Play Now</button>
+          <a class="button button-secondary" href="https://discord.gg/ntz2NSUmTn" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>⚔ Lifesteal</span>
+          <span>•</span>
+          <span>Java Edition</span>
+          <span>•</span>
+          <span>Premium + Cracked Supported</span>
+        </div>
+      </div>
+      <div class="scroll-cue">SCROLL <span>↓</span></div>
+    </section>
+
+    <section class="section section-muted" id="store">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">SUPPORT THE SERVER</span>
+            <h2>AquaticMC Store</h2>
+          </div>
+          <span class="placeholder-badge">PLACEHOLDER PRODUCTS</span>
+        </div>
+
+        <div class="store-notice">
+          <div class="notice-icon">◆</div>
+          <div>
+            <strong>Tebex integration ready</strong>
+            <p>
+              These are example products only. Replace them with your real Tebex
+              storefront data when your store is ready.
+            </p>
+          </div>
+        </div>
+
+        <div class="store-tabs">
+          <button class="store-tab active">Lifesteal</button>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-art">◆</div>
+            <span class="product-type">RANK</span>
+            <h3>Example Rank</h3>
+            <p>Example rank benefits for your Lifesteal server.</p>
+            <ul><li>Example benefit</li><li>Example perk</li><li>Example cosmetic</li></ul>
+            <div class="product-bottom"><strong>$5.00</strong><button class="button button-small" data-placeholder-purchase>Purchase</button></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art">✦</div>
+            <span class="product-type">CRATE KEY</span>
+            <h3>Example Key</h3>
+            <p>Example crate key product ready to be replaced.</p>
+            <ul><li>Example rewards</li><li>Example chance table</li></ul>
+            <div class="product-bottom"><strong>$2.00</strong><button class="button button-small" data-placeholder-purchase>Purchase</button></div>
+          </article>
+
+          <article class="product-card featured">
+            <div class="product-art">◆✦◆</div>
+            <span class="product-type">BUNDLE</span>
+            <h3>Example Lifesteal Bundle</h3>
+            <p>An example bundle showing how a larger Tebex product can look.</p>
+            <ul><li>Example rank</li><li>Example keys</li><li>Example bonus items</li></ul>
+            <div class="product-bottom"><strong>$10.00</strong><button class="button button-small" data-placeholder-purchase>Purchase</button></div>
+          </article>
+        </div>
+
+        <div class="integration-box">
+          <span>TEBEX CONFIGURATION</span>
+          <code>Replace <b>TEBEX_STORE_URL</b> in <b>script.js</b> with your real Tebex storefront URL.</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="staff">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">THE TEAM</span>
+          <h2>Meet the Staff</h2>
+          <p>The people helping build and manage AquaticMC.</p>
+        </div>
+
+        <div class="staff-tree" id="staffTree"></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="vote">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">HELP US GROW</span>
+          <h2>Vote for AquaticMC</h2>
+          <p>Voting sites are placeholders for now and can be replaced with your real links.</p>
+        </div>
+
+        <div class="vote-grid" id="voteGrid"></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <img src="assets/aquaticmc.png" alt="" />
+        <div>
+          <span class="section-kicker">READY TO PLAY?</span>
+          <h2>Jump into AquaticMC.</h2>
+          <p>Connect with <code>play.playaquaticmc.xyz</code> and start your Lifesteal adventure.</p>
+        </div>
+        <button class="button button-primary" data-copy-ip>Copy IP</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <img src="assets/aquaticmc.png" alt="AquaticMC logo" />
+          <span>Aquatic<span>MC</span></span>
+        </a>
+        <p>Your Minecraft adventure starts here.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="#staff">Staff</a>
+        <a href="#vote">Vote</a>
+      </div>
+
+      <div>
+        <h4>Server</h4>
+        <button class="footer-ip" data-copy-ip>play.playaquaticmc.xyz</button>
+        <a href="https://discord.gg/ntz2NSUmTn" target="_blank" rel="noopener">Join Discord</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="#" data-placeholder-link>Support</a>
+        <a href="#" data-placeholder-link>Contact Us</a>
+        <a href="#" data-placeholder-link>Rules</a>
+        <a href="#" data-placeholder-link>Privacy Policy</a>
+        <a href="#" data-placeholder-link>Terms of Service</a>
+      </div>
+    </div>
+
+    <div class="container legal">
+      <p>AquaticMC is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+      <p>© 2026 AquaticMC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
