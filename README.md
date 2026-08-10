@@ -1,13 +1,33 @@
 # AquaticMC Website
 
-A static, responsive AquaticMC Minecraft server website.
+A static, responsive AquaticMC Minecraft server website served through a minimal Node.js/npm server.
 
 ## Files
 
 - `index.html` — site structure/content
 - `styles.css` — complete responsive design
 - `script.js` — staff data, voting data, copy-IP button, placeholder Tebex integration
+- `server.js` — lightweight Node.js web server
+- `package.json` — npm configuration and start script
 - `assets/aquaticmc.png` — supplied AquaticMC logo
+
+## Render Web Service settings
+
+If using Render as a **Web Service**, use:
+
+**Build Command**
+```text
+npm install
+```
+
+**Start Command**
+```text
+npm start
+```
+
+Render will provide the `PORT` environment variable automatically, and `server.js` listens on it.
+
+No Express or other npm dependency is required.
 
 ## Easy configuration
 
@@ -29,9 +49,3 @@ Edit the `staff` array to add/remove usernames while keeping the hierarchy.
 The current values are already configured:
 - `play.playaquaticmc.xyz`
 - `https://discord.gg/ntz2NSUmTn`
-
-## Hosting
-
-This is a static website and can be hosted directly on GitHub Pages, Render Static Sites, Cloudflare Pages, Netlify, or similar services.
-
-No build command is required.
