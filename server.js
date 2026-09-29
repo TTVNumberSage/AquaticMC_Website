@@ -133,31 +133,65 @@ async function getCategories() {
   return Array.isArray(data?.data) ? data.data : [];
 }
 
-const STORE_CATEGORIES = ["Gems", "Ranks", "Rank Upgrades", "Keys", "Collectors", "Gkits"];
+const STORE_CATEGORIES = ["Gems", "Ranks", "Rank Upgrades", "Keys", "Collectors", "GKits"];
 
-function selectStoreCategories(tree) {
+function selectStoreCategories(categories) {
   const wanted = new Map(STORE_CATEGORIES.map((name, index) => [name.toLowerCase(), {name, index}]));
   const selected = [];
+  const seen = new Set();
 
-  for (const group of tree) {
-    for (const category of group.categories || []) {
-      const key = String(category.name || "").trim().toLowerCase();
-      const match = wanted.get(key);
-      if (!match) continue;
-      selected.push({...category, name: match.name, _storeIndex: match.index});
+  // Tebex categories are the source of truth here. We match the actual
+  // category names and never search package names for category labels.
+  function visit(category) {
+    if (!category || typeof category !== "object") return;
+
+    const id = category.id != null ? String(category.id) : null;
+    const name = String(category.name || "").trim();
+    const key = name.toLowerCase();
+
+    if (id && seen.has(id)) return;
+    if (id) seen.add(id);
+
+    const match = wanted.get(key);
+    if (match) {
+      selected.push({
+        id: id || name,
+        name: match.name,
+        description: cleanDescription(category.description),
+        order: Number(category.order || 0),
+        packages: Array.isArray(category.packages)
+          ? category.packages.map(p => normalizePackage(p, match.name))
+          : []
+      });
+    }
+
+    // Be tolerant of nested category data returned by Tebex while still
+    // matching categories themselves, never package names.
+    if (Array.isArray(category.categories)) {
+      for (const child of category.categories) visit(child);
+    }
+    if (Array.isArray(category.children)) {
+      for (const child of category.children) visit(child);
     }
   }
 
-  return selected.sort((a, b) => a._storeIndex - b._storeIndex).map(({_storeIndex, ...category}) => category);
+  for (const category of categories || []) visit(category);
+
+  return selected
+    .sort((a, b) => {
+      const ai = STORE_CATEGORIES.findIndex(name => name.toLowerCase() === a.name.toLowerCase());
+      const bi = STORE_CATEGORIES.findIndex(name => name.toLowerCase() === b.name.toLowerCase());
+      return ai - bi;
+    });
 }
 
 app.get("/api/store", async (_req, res) => {
   try {
-    const tree = buildTree(await getCategories());
+    const categories = await getCategories();
     res.json({
       configured: Boolean(tebexToken()),
       gamemode: "Lifesteal",
-      groups: selectStoreCategories(tree),
+      groups: selectStoreCategories(categories),
       requestedCategories: STORE_CATEGORIES
     });
   } catch (e) {

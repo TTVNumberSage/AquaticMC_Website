@@ -19,7 +19,7 @@ The store is configured to load only these categories, in this order:
 3. Rank Upgrades
 4. Keys
 5. Collectors
-6. Gkits
+6. GKits
 
 The Tebex token is configured server-side in `wrangler.toml` for convenience. For a public Git repository, move `TEBEX_WEBSTORE_TOKEN` to a Cloudflare Worker secret instead of committing the token.
 
