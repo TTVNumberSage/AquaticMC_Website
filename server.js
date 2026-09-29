@@ -133,14 +133,32 @@ async function getCategories() {
   return Array.isArray(data?.data) ? data.data : [];
 }
 
+const STORE_CATEGORIES = ["Gems", "Ranks", "Rank Upgrades", "Keys", "Collectors", "Gkits"];
+
+function selectStoreCategories(tree) {
+  const wanted = new Map(STORE_CATEGORIES.map((name, index) => [name.toLowerCase(), {name, index}]));
+  const selected = [];
+
+  for (const group of tree) {
+    for (const category of group.categories || []) {
+      const key = String(category.name || "").trim().toLowerCase();
+      const match = wanted.get(key);
+      if (!match) continue;
+      selected.push({...category, name: match.name, _storeIndex: match.index});
+    }
+  }
+
+  return selected.sort((a, b) => a._storeIndex - b._storeIndex).map(({_storeIndex, ...category}) => category);
+}
+
 app.get("/api/store", async (_req, res) => {
   try {
     const tree = buildTree(await getCategories());
-    const game = tree.find(g => g.name.toLowerCase() === "lifesteal");
     res.json({
       configured: Boolean(tebexToken()),
       gamemode: "Lifesteal",
-      groups: game?.categories || []
+      groups: selectStoreCategories(tree),
+      requestedCategories: STORE_CATEGORIES
     });
   } catch (e) {
     console.error("AquaticMC Tebex store error:", e);

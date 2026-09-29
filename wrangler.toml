@@ -13,3 +13,5 @@ not_found_handling = "single-page-application"
 
 [vars]
 PUBLIC_URL = "https://playaquaticmc.net"
+
+TEBEX_WEBSTORE_TOKEN = "13y78-440e59de3ddc96689ec1990a6b97c096132064d4"

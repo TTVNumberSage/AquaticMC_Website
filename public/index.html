@@ -61,11 +61,16 @@
             <strong>playaquaticmc.net</strong>
             <button class="copy" data-copy="playaquaticmc.net">Copy</button>
           </div>
-          <div class="connection-item">
-            <span class="connection-label">Bedrock Edition</span>
-            <strong>playaquaticmc.net</strong>
-            <span class="port">Port 19132</span>
-            <button class="copy" data-copy="playaquaticmc.net">Copy</button>
+          <div class="connection-item bedrock-connection">
+            <div class="bedrock-copy-head">
+              <span class="connection-label">Bedrock Edition</span>
+              <span class="bedrock-badge">PORT ONLY</span>
+            </div>
+            <div class="bedrock-port-row">
+              <strong class="bedrock-port">19132</strong>
+              <button class="copy" data-copy="19132">Copy Port</button>
+            </div>
+            <p class="bedrock-note">Use <strong>playaquaticmc.net</strong> as the Bedrock server address above, then enter <strong>19132</strong> as the port.</p>
           </div>
           <div class="version-note">Recommended / native version: <strong>1.21.11</strong> · Cracked access supported</div>
         </div>
@@ -110,51 +115,68 @@
     </section>
 
     <section class="page" id="rules">
-      <div class="page-heading">
-        <div class="eyebrow">AQUATICMC RULES</div>
-        <h1>Play fair. <span>Have fun.</span></h1>
-        <p>These rules apply across AquaticMC. Staff may take action when behavior clearly violates the spirit of the rules, even when a specific example is not listed.</p>
+      <div class="page-heading rules-heading">
+        <div class="eyebrow">AQUATICMC RULEBOOK</div>
+        <h1>Play fair. <span>Make waves.</span></h1>
+        <p>Our rules are here to keep AquaticMC competitive, enjoyable, and fair for everyone. The exact rules below are the rules that apply to the server and community.</p>
+      </div>
+
+      <div class="rules-banner">
+        <div class="rules-banner-icon">⚖️</div>
+        <div>
+          <strong>Know the rules before you play.</strong>
+          <p>Not knowing a rule does not make it okay to break it. If you are unsure whether something is allowed, ask staff before doing it.</p>
+        </div>
       </div>
 
       <div class="rules-grid">
-        <article class="rules-card">
-          <div class="rules-title"><span>⚔️</span><h2>Minecraft Server Rules</h2></div>
-          <ul>
-            <li>No Hacked Clients</li>
-            <li>No Movement Mods</li>
-            <li>No Freecam</li>
-            <li>No ESP</li>
-            <li>No Auto or Easy Place</li>
-            <li>No Macros or Scripts</li>
-            <li>No Auto Clicker</li>
-            <li>No Mouse Tweaks/ Scrollers</li>
-            <li>No Crafting Modifications</li>
-            <li>No Abusing Bugs</li>
-            <li>No Attempted Duplicating</li>
-            <li>No Duplicating Items</li>
-            <li>No Staff Impersonation</li>
-            <li>No Finding or Using the Seed</li>
-            <li>No Spamming Voice Chat</li>
-            <li>Report all Bugs, Glitches, and Cheaters</li>
-            <li>Only 1 Alt Per Player</li>
-            <li>No Account Boosting</li>
-          </ul>
+        <article class="rules-card rules-card-main">
+          <div class="rules-title"><span>⚔️</span><div><h2>Minecraft Server Rules</h2><p>Gameplay, clients, exploits, and account activity.</p></div></div>
+          <ol class="rule-list">
+            <li><span><strong>No Hacked Clients</strong><small>Do not use clients that provide unfair advantages.</small></span></li>
+            <li><span><strong>No Movement Mods</strong><small>Do not use modifications that alter or automate movement.</small></span></li>
+            <li><span><strong>No Freecam</strong><small>Do not use free-camera tools to see or interact with areas you could not normally access.</small></span></li>
+            <li><span><strong>No ESP</strong><small>Do not use tools that reveal hidden players, entities, or information.</small></span></li>
+            <li><span><strong>No Auto or Easy Place</strong><small>Do not automate placement or use tools that make placement unfairly easier.</small></span></li>
+            <li><span><strong>No Macros or Scripts</strong><small>Do not automate gameplay actions through macros or scripts.</small></span></li>
+            <li><span><strong>No Auto Clicker</strong><small>Clicking must be performed normally by the player.</small></span></li>
+            <li><span><strong>No Mouse Tweaks/ Scrollers</strong><small>Do not use mouse features or scroll automation to gain an unfair advantage.</small></span></li>
+            <li><span><strong>No Crafting Modifications</strong><small>Do not use modifications that change or automate crafting behavior.</small></span></li>
+            <li><span><strong>No Abusing Bugs</strong><small>Do not intentionally use bugs or glitches to gain an advantage.</small></span></li>
+            <li><span><strong>No Attempted Duplicating</strong><small>Do not attempt to create item or resource duplication methods.</small></span></li>
+            <li><span><strong>No Duplicating Items</strong><small>Do not duplicate items or knowingly use duplicated items.</small></span></li>
+            <li><span><strong>No Staff Impersonation</strong><small>Do not pretend to be a member of the AquaticMC staff team.</small></span></li>
+            <li><span><strong>No Finding or Using the Seed</strong><small>Do not obtain, discover, or use the server seed.</small></span></li>
+            <li><span><strong>No Spamming Voice Chat</strong><small>Do not spam or intentionally disrupt voice communication.</small></span></li>
+            <li><span><strong>Report all Bugs, Glitches, and Cheaters</strong><small>Help keep the server fair by reporting problems and rule breakers to staff.</small></span></li>
+            <li><span><strong>Only 1 Alt Per Player</strong><small>Each player may have only one alternate account.</small></span></li>
+            <li><span><strong>No Account Boosting</strong><small>Do not use other accounts to unfairly progress, farm, or benefit an account.</small></span></li>
+          </ol>
         </article>
 
-        <article class="rules-card">
-          <div class="rules-title"><span>💬</span><h2>Chat Rules</h2></div>
-          <ul>
-            <li>No Spamming or getting others to spam</li>
-            <li>No Harassing</li>
-            <li>No Advertising or Promotion</li>
-            <li>No Discrimination or Hate Speech</li>
-            <li>No Death Threats</li>
-            <li>No Sharing Others Private Information</li>
-            <li>No Pretending to be Staff Members</li>
-            <li>No Ban Evasion</li>
-            <li>Use common sense, so don't do things that will get you banned just because the specific rule isn't up here</li>
-          </ul>
+        <article class="rules-card rules-card-chat">
+          <div class="rules-title"><span>💬</span><div><h2>Chat Rules</h2><p>Keep chat and the community welcoming.</p></div></div>
+          <ol class="rule-list">
+            <li><span><strong>No Spamming or getting others to spam</strong><small>Do not flood chat or encourage other players to do so.</small></span></li>
+            <li><span><strong>No Harassing</strong><small>Do not repeatedly target, bully, or harass other players.</small></span></li>
+            <li><span><strong>No Advertising or Promotion</strong><small>Do not advertise or promote outside servers, services, or communities.</small></span></li>
+            <li><span><strong>No Discrimination or Hate Speech</strong><small>Do not attack or target people based on protected or personal characteristics.</small></span></li>
+            <li><span><strong>No Death Threats</strong><small>Threats of violence or death are not allowed.</small></span></li>
+            <li><span><strong>No Sharing Others Private Information</strong><small>Do not share another person's private or personal information.</small></span></li>
+            <li><span><strong>No Pretending to be Staff Members</strong><small>Do not claim or imply that you are an AquaticMC staff member when you are not.</small></span></li>
+            <li><span><strong>No Ban Evasion</strong><small>Do not evade a punishment by using another account.</small></span></li>
+            <li><span><strong>Use common sense, so don't do things that will get you banned just because the specific rule isn't up here</strong><small>If something is clearly intended to bypass the rules or harm the community, do not do it simply because it is not listed word-for-word.</small></span></li>
+          </ol>
         </article>
+      </div>
+
+      <div class="rules-footer-card">
+        <div class="rules-footer-icon">🛡️</div>
+        <div>
+          <h2>When in doubt, ask first.</h2>
+          <p>These rules are designed to make expectations clear. If you are unsure about a client, mod, exploit, account setup, or community interaction, contact the AquaticMC team before using it.</p>
+        </div>
+        <a class="secondary" href="https://discord.gg/qduuwXuEnM" target="_blank" rel="noopener">Ask on Discord →</a>
       </div>
     </section>
 
@@ -200,6 +222,7 @@
       <span>© 2026 AquaticMC. All rights reserved.</span>
       <span>playaquaticmc.net · Bedrock Port 19132</span>
     </div>
+    <div class="minecraft-disclaimer">AquaticMC is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</div>
   </footer>
 
   <div class="modal hidden" id="packageModal" aria-hidden="true">
