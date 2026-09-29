@@ -1,51 +1,48 @@
 # AquaticMC Website
 
-A static, responsive AquaticMC Minecraft server website served through a minimal Node.js/npm server.
+Basic AquaticMC website based on the supplied YAMCS layout.
 
-## Files
+## Removed
+- Database / D1
+- Hyperdrive / LiteBans
+- Sign in / account system
+- Discord authentication
+- Settings
+- Forums
+- Live chat
+- Staff panel
+- Admin panel
+- Punishment lookup
+- Minecraft linking
+- Password reset
+- Watchdog integrations
+- Discord bots/services
 
-- `index.html` — site structure/content
-- `styles.css` — complete responsive design
-- `script.js` — staff data, voting data, copy-IP button, placeholder Tebex integration
-- `server.js` — lightweight Node.js web server
-- `package.json` — npm configuration and start script
-- `assets/aquaticmc.png` — supplied AquaticMC logo
+## Included
+- Home page
+- AquaticMC branding/logo
+- Lifesteal as the only advertised gamemode
+- Server connection information
+- Rules
+- Static Vote page placeholder
+- Static Staff page placeholder
+- Discord buttons
+- Tebex Store + local cart
+- Tebex checkout
 
-## Render Web Service settings
+## Server information
+- IP: `playaquaticmc.net`
+- Bedrock port: `19132`
+- Recommended/native version: `1.21.11`
+- Bedrock supported
+- Cracked supported
+- Discord: `https://discord.gg/qduuwXuEnM`
 
-If using Render as a **Web Service**, use:
+## Tebex
+The store is the only part that needs an external service. Set the Worker environment variable:
 
-**Build Command**
-```text
-npm install
-```
+`TEBEX_WEBSTORE_TOKEN`
 
-**Start Command**
-```text
-npm start
-```
+The website itself does not store user accounts, carts, staff data, or any database records. The cart is only kept locally in the visitor's browser until checkout.
 
-Render will provide the `PORT` environment variable automatically, and `server.js` listens on it.
-
-No Express or other npm dependency is required.
-
-## Easy configuration
-
-Open `script.js` and edit:
-
-### Tebex
-```js
-const TEBEX_STORE_URL = "";
-```
-Replace the empty string with your real Tebex storefront URL.
-
-### Voting sites
-Edit the `voteSites` array and set each site's `url`.
-
-### Staff
-Edit the `staff` array to add/remove usernames while keeping the hierarchy.
-
-### Server IP / Discord
-The current values are already configured:
-- `play.playaquaticmc.xyz`
-- `https://discord.gg/ntz2NSUmTn`
+Set `PUBLIC_URL` to `https://playaquaticmc.net` in the Worker environment/config if the domain differs.

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaticMC — Minecraft Lifesteal</title>
+  <meta name="description" content="AquaticMC Minecraft Lifesteal server. Java and Bedrock supported.">
+  <link rel="icon" type="image/webp" href="aquaticmc-logo.webp">
+  <link rel="apple-touch-icon" href="aquaticmc-logo.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="water-bg"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="AquaticMC home">
+      <img src="aquaticmc-logo.webp" alt="AquaticMC logo">
+      <span>
+        <strong>AquaticMC</strong>
+        <small>MINECRAFT NETWORK</small>
+      </span>
+    </a>
+
+    <nav>
+      <a data-page="home" href="#home">Home</a>
+      <a data-page="store" href="#store">Store</a>
+      <a data-page="rules" href="#rules">Rules</a>
+      <a data-page="vote" href="#vote">Vote</a>
+      <a data-page="staff" href="#staff">Staff</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="openCart">Cart <span id="cartCount">0</span></button>
+      <a class="discord-btn" href="https://discord.gg/qduuwXuEnM" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="eyebrow">WELCOME TO AQUATICMC</div>
+        <h1>Make waves.<br><span>Build your legacy.</span></h1>
+        <p>AquaticMC is a Minecraft Lifesteal server built for competitive survival, progression, and community. Jump in and start playing.</p>
+        <div class="hero-actions">
+          <button class="primary" data-copy="playaquaticmc.net">Copy IP</button>
+          <a class="secondary" href="#store">Visit Store</a>
+          <a class="secondary" href="https://discord.gg/qduuwXuEnM" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+      </div>
+
+      <div class="connection-card">
+        <div>
+          <div class="section-kicker">SERVER CONNECTION</div>
+          <h2>Ready to play?</h2>
+          <p class="muted">Java and Bedrock players can connect to the same AquaticMC server.</p>
+          <div class="status-pill"><span></span> Online</div>
+        </div>
+        <div class="connection-grid">
+          <div class="connection-item">
+            <span class="connection-label">Java Edition</span>
+            <strong>playaquaticmc.net</strong>
+            <button class="copy" data-copy="playaquaticmc.net">Copy</button>
+          </div>
+          <div class="connection-item">
+            <span class="connection-label">Bedrock Edition</span>
+            <strong>playaquaticmc.net</strong>
+            <span class="port">Port 19132</span>
+            <button class="copy" data-copy="playaquaticmc.net">Copy</button>
+          </div>
+          <div class="version-note">Recommended / native version: <strong>1.21.11</strong> · Cracked access supported</div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">ONE SERVER · ONE MODE</div>
+          <h2>Everything is focused on Lifesteal.</h2>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="feature-icon">❤️</div>
+          <h3>Lifesteal</h3>
+          <p>Fight, survive, gain hearts, and protect what you've built.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">🌊</div>
+          <h3>Crossplay</h3>
+          <p>Play from Java or Bedrock with the same server address.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">⚔️</div>
+          <h3>Community</h3>
+          <p>Join the Discord, meet other players, and stay up to date.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="store">
+      <div class="page-heading">
+        <div class="eyebrow">AQUATICMC STORE</div>
+        <h1>Support the <span>server.</span></h1>
+        <p>Browse the available AquaticMC packages. Purchases are handled securely through Tebex.</p>
+      </div>
+
+      <div id="storeStatus" class="store-status hidden"></div>
+      <div id="storeBrowser" class="store-browser">
+        <div class="loading">Loading store…</div>
+      </div>
+    </section>
+
+    <section class="page" id="rules">
+      <div class="page-heading">
+        <div class="eyebrow">AQUATICMC RULES</div>
+        <h1>Play fair. <span>Have fun.</span></h1>
+        <p>These rules apply across AquaticMC. Staff may take action when behavior clearly violates the spirit of the rules, even when a specific example is not listed.</p>
+      </div>
+
+      <div class="rules-grid">
+        <article class="rules-card">
+          <div class="rules-title"><span>⚔️</span><h2>Minecraft Server Rules</h2></div>
+          <ul>
+            <li>No Hacked Clients</li>
+            <li>No Movement Mods</li>
+            <li>No Freecam</li>
+            <li>No ESP</li>
+            <li>No Auto or Easy Place</li>
+            <li>No Macros or Scripts</li>
+            <li>No Auto Clicker</li>
+            <li>No Mouse Tweaks/ Scrollers</li>
+            <li>No Crafting Modifications</li>
+            <li>No Abusing Bugs</li>
+            <li>No Attempted Duplicating</li>
+            <li>No Duplicating Items</li>
+            <li>No Staff Impersonation</li>
+            <li>No Finding or Using the Seed</li>
+            <li>No Spamming Voice Chat</li>
+            <li>Report all Bugs, Glitches, and Cheaters</li>
+            <li>Only 1 Alt Per Player</li>
+            <li>No Account Boosting</li>
+          </ul>
+        </article>
+
+        <article class="rules-card">
+          <div class="rules-title"><span>💬</span><h2>Chat Rules</h2></div>
+          <ul>
+            <li>No Spamming or getting others to spam</li>
+            <li>No Harassing</li>
+            <li>No Advertising or Promotion</li>
+            <li>No Discrimination or Hate Speech</li>
+            <li>No Death Threats</li>
+            <li>No Sharing Others Private Information</li>
+            <li>No Pretending to be Staff Members</li>
+            <li>No Ban Evasion</li>
+            <li>Use common sense, so don't do things that will get you banned just because the specific rule isn't up here</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="vote">
+      <div class="page-heading">
+        <div class="eyebrow">SUPPORT AQUATICMC</div>
+        <h1>Vote for <span>AquaticMC.</span></h1>
+        <p>Voting links can be added here when the server's voting sites are ready.</p>
+      </div>
+      <div class="empty-card">
+        <div class="big-icon">🗳️</div>
+        <h2>Voting is coming soon</h2>
+        <p>This page is ready for your vote links. No account or database connection is required.</p>
+      </div>
+    </section>
+
+    <section class="page" id="staff">
+      <div class="page-heading">
+        <div class="eyebrow">THE AQUATICMC TEAM</div>
+        <h1>Meet the <span>staff.</span></h1>
+        <p>Staff information can be added here whenever you are ready.</p>
+      </div>
+      <div class="empty-card">
+        <div class="big-icon">🛡️</div>
+        <h2>Staff list coming soon</h2>
+        <p>This is a simple static page — there is no staff panel, sign-in system, or database behind it.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <a class="footer-brand" href="#home"><img src="aquaticmc-logo.webp" alt="">AquaticMC</a>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="#rules">Rules</a>
+        <a href="#vote">Vote</a>
+        <a href="https://discord.gg/qduuwXuEnM" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AquaticMC. All rights reserved.</span>
+      <span>playaquaticmc.net · Bedrock Port 19132</span>
+    </div>
+  </footer>
+
+  <div class="modal hidden" id="packageModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <div class="eyebrow" id="detailKicker">STORE PACKAGE</div>
+      <h2 id="detailTitle">Package</h2>
+      <div class="detail-price" id="detailPrice">$0.00</div>
+      <div class="detail-description" id="detailDescription"></div>
+      <div class="detail-actions">
+        <label>Quantity <input id="detailQuantity" type="number" min="1" max="99" value="1"></label>
+        <button class="primary" id="detailAdd">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer hidden" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <div><div class="eyebrow">YOUR CART</div><h2>Store Cart</h2></div>
+        <button class="modal-close" data-close-cart>×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <div class="checkout-form">
+        <label>Minecraft Username
+          <input id="recipient" maxlength="16" placeholder="Your Minecraft username">
+        </label>
+        <label>Creator Code <span class="muted">(optional)</span>
+          <input id="creatorCode" maxlength="64" placeholder="Creator code">
+        </label>
+        <button class="primary" id="checkoutBtn">Continue to Checkout →</button>
+        <p id="checkoutStatus" class="form-status"></p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast hidden" id="toast"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
